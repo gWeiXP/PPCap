@@ -54,20 +54,20 @@ def main():
     parser = argparse.ArgumentParser()
 
     # Required parameters
-    parser.add_argument("--gen_model_name_or_path", default="/home/liwc/wxp/Alignment/github/trained_model_PPCap/factual_model/model_CLIPCap_medium_5.pt", type=str)
-    parser.add_argument("--base_model_type", default="gpt2-medium", type=str)
+    parser.add_argument("--gen_model_name_or_path", default="./model_CLIPCap_small_4.pt", type=str)
+    parser.add_argument("--base_model_type", default="gpt2", type=str)
     parser.add_argument("--generated_path", default="./generated/guide")
-    parser.add_argument("--gen_model_type", default="base_medium_flickr_style")
-    parser.add_argument("--gedi_model_name_or_path", default="/home/liwc/wxp/Alignment/github/trained_model/stylized_model/model_fu_1.pt", type=str)
+    parser.add_argument("--gen_model_type", default="base_small_senticap")
+    parser.add_argument("--gedi_model_name_or_path", default="./model_pos_9.pt", type=str)
     parser.add_argument("--gedi_model_type", default="gpt2", type=str)
-    parser.add_argument("--testdata", default="/home/liwc/wxp/Alignment/github/dataset/FlickrStyle10k/FlickrStyle10k_ViT-L_14_test.pkl", type=str)
+    parser.add_argument("--testdata", default="./Senticap_ViT-L_14_test.pkl", type=str)
     parser.add_argument("--device", default="cuda:1")
     parser.add_argument("--per_gpu_eval_batch_size", default=16, type=int)
-    parser.add_argument("--teststyle", default="humorous")
-    parser.add_argument("--code_1", default=" humorous")
-    parser.add_argument("--code_0", default=" factual")
+    parser.add_argument("--teststyle", default="positive")
+    parser.add_argument("--code_1", default="positive")
+    parser.add_argument("--code_0", default="negative")
     parser.add_argument("--do_norm", default=False)
-    parser.add_argument("--disc_weight", type=float, default=39)
+    parser.add_argument("--disc_weight", type=float, default=300)
 
 
     parser.add_argument("--gen_length", type=int, default=21, help= "generation length")
@@ -348,6 +348,10 @@ def main():
         result.update(other_metrics)
 
         # 保存描述
+        generate_path = args.generated_path + "/" + args.gen_model_type + "/" + args.teststyle
+        if not os.path.exists(generate_path):
+            os.makedirs(generate_path)
+
         out_txt_dir = args.generated_path + "/" + args.gen_model_type + "/" + args.teststyle +"/captions_generate_"+ str(args.disc_weight) + ".txt"
         with open(out_txt_dir, "w") as file:
                 for generate_ref in ref:
