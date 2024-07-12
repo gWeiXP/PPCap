@@ -27,7 +27,7 @@ Apologies, we noticed that there are some absolute paths in the code that need t
 * The paths ""/home/liwc/wxp/refercode/DataTestProcess/bert-base-uncased/vocab.txt"" in `utils.py eval_acc()` : we have uploaded the `bert-base-uncased` folder to this project.
 
 ## Datasets and trained models
-* Download MSCOCO [validation images](http://images.cocodataset.org/zips/val2014.zip)
+* Download MSCOCO [validation images](http://images.cocodataset.org/zips/val2014.zip) and Flickr30k dataset from [Baidu Netdisk](https://pan.baidu.com/s/1r0RVUwctJsI0iNuVXHQ6kA) with the extracted code 'hrf3'  (We need their images).
 * Download the processed dataset from [Baidu Netdisk](https://pan.baidu.com/s/1NLn9wOwK6GajkDbdCfZVIw). the extracted code is 'zoz4'. 
 * Download the trained classfier from [Baidu Netdisk](https://pan.baidu.com/s/1anksxmotMBsipLjeg1EvRg). the extracted code is 'eh91'. It is used to evaluate the cls. The 'classifier' folder needs to be placed in the current directory.
 * Download the factual model from [Baidu Netdisk](https://pan.baidu.com/s/19yydiOBrLWp54SV1_-2w6Q). the extracted code is 'i55y'. 
