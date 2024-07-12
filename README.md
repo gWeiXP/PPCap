@@ -1,7 +1,5 @@
 # PPCap
 
-It's still not runnable; we're still making modifications. Just learned how to use GitHub.
-
 The code for applying PPCap to PureT has been uploaded to [GitHub](https://github.com/gWeiXP/PPCapPureT). We will be uploading the data and trained models soon. 
 
 See `'appendix.pdf'` for the revised appendix.
