@@ -6,11 +6,11 @@ The code for applying PPCap to PureT has been uploaded to [GitHub](https://githu
 
 See `'appendix.pdf'` for the revised appendix.
 
-
-# PPCap_PureT
 # Generating from models used in paper
 Run `test_guide.py` to generate stylized captions. Since the code is modified based on CLIPCap and GeDi, there are many unused parameters. If you find it troublesome, you can go and see [the code for applying PPCap to PureT](https://github.com/gWeiXP/PPCapPureT), which has been tidied up and is now very clean and concise.
 
+
+## Important arguments
 Important arguments include:
 * `--gen_model_name_or_path`, the path of pre-trained factual model
 * `--base_model_type`, the type of factual model
@@ -20,6 +20,8 @@ Important arguments include:
 * `--disc_weight`, the weight w
 * `--testdata`, the path of test set
 * `--teststyle`, the desired style
+
+Apologies, we noticed that there are some absolute paths in the code that need to be modified to match the file paths on your device.
 
 ## Datasets and trained models
 * Download the processed dataset and trained models from [Baidu Netdisk](https://pan.baidu.com/s/1rBb8-4_lp2IfxJkEO0MmmA). the extracted code is 'zp8c'. The 'classifier' folder needs to be placed in the current directory.
