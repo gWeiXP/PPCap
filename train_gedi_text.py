@@ -452,7 +452,7 @@ def main():
     # train add
     parser.add_argument('--data', default='./data/dataset_train/Senticap_text_ViT-L_14_train.pkl')
     parser.add_argument('--testdata', default='./data/Senticap/Senticap_ViT-L_14_test.pkl')
-    parser.add_argument('--teststyle', default='negative')
+    parser.add_argument('--teststyle', default='')
     parser.add_argument('--testdata_loss', default='')
     parser.add_argument("--do_train", default=True)
     parser.add_argument("--do_eval", default=False)
@@ -463,7 +463,7 @@ def main():
     parser.add_argument("--do_sign", default=False) # 没有用了，可忽视
     parser.add_argument('--variance', default=0.016)
     parser.add_argument('--finetune', default=False)
-    parser.add_argument('--pretrain_path', default="./model/base/base_mscoco_pretrain/mscoco-007.pt")
+    parser.add_argument('--pretrain_path', default="")
 
 
     parser.add_argument('--prefix_length', type=int, default=4)

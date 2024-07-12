@@ -451,19 +451,19 @@ def main():
 
     # train add
     parser.add_argument('--data', default='./data/dataset_train/Flickrstyle10k_ro_text_ViT-L_14_train.pkl')
-    parser.add_argument('--testdata', default='./data/FlickrStyle10k/FlickrStyle10k_ViT-L_14_test.pkl')
+    parser.add_argument('--testdata', default='')
     parser.add_argument('--teststyle', default='romantic')
     parser.add_argument('--testdata_loss', default='')
     parser.add_argument("--do_train", default=1)
-    parser.add_argument("--do_eval", default=True)
+    parser.add_argument("--do_eval", default=0)
     parser.add_argument("--output_dir", default="./model/gedi/test", type=str, required=False)
-    parser.add_argument("--generated_path", default="./generated/test", type=str, required=False)
+    parser.add_argument("--generated_path", default="", type=str, required=False)
     parser.add_argument('--output_prefix', default='flickrro')
     parser.add_argument("--do_norm", default=True)
     parser.add_argument("--do_sign", default=False) # 没有什么作用，可忽视
     parser.add_argument('--variance', default=0.016)
     parser.add_argument('--finetune', default=False)
-    parser.add_argument('--pretrain_path', default="./model/base/base_mscoco_pretrain/mscoco-007.pt")
+    parser.add_argument('--pretrain_path', default="")
 
 
     parser.add_argument('--prefix_length', type=int, default=4)
