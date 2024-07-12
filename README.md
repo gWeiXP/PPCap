@@ -54,12 +54,13 @@ If testing on FlickrStyle10k dataset, set `--gen_model_name_or_path` to the path
 * `romantic rerults:`{"clipscore": 0.642578125, "refclipscores": 0.63916015625, "bleu": [0.22356741899468535, 0.1045850053517702, 0.05280074080050402, 0.025500525755897775], "meteor": 0.10218282700411685, "rouge": 0.24985227626618087, "cider": 0.32640126766970795, "ppl": 35.859, "acc": 0.959}
 * `humorous rerults:`{"clipscore": 0.63037109375, "refclipscores": 0.61279296875, "bleu": [0.21228245095838047, 0.0891456612789367, 0.039504376256192346, 0.018751173809324215], "meteor": 0.09291636135147632, "rouge": 0.21964106236745518, "cider": 0.2753052856719873, "ppl": 43.93906, "acc": 0.903}
 
-# Train the stylized model
+## Train the stylized model
 
  If you are interested, you can train this stylized model yourself. There are many absolute paths that need to be modified.
 
 ## Process the data
-The annotations for Flickrs8k can be downloaded from [here](https://www.kaggle.com/datasets/shtvkumar/karpathy-splits).
+The annotations for Flickrs8k and SentiCap, can be downloaded from [here](https://www.kaggle.com/datasets/shtvkumar/karpathy-splits) and 
+[here](https://www.kaggle.com/datasets/prathamsaraf1389/senticap), respectively.
 
 In `parse_data` folder,  run `parse_senticap.py ` and `parse_senticap_text.py ` to process the senticap dataset, run `parse_flickrstyle10k.py ` and `parse_flickrstyle10k_text.py` to process the FlickrStyle10k dataset.
 
