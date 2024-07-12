@@ -1,8 +1,8 @@
 # PPCap
 
-The code for applying PPCap to PureT has been uploaded to [GitHub](https://github.com/gWeiXP/PPCapPureT). We will be uploading the data and trained models soon. 
+1 The code for applying PPCap to PureT has been uploaded to [GitHub](https://github.com/gWeiXP/PPCapPureT).
 
-See `'appendix.pdf'` for the revised appendix.
+2 See `'appendix.pdf'` for the revised appendix.
 
 # Generating from models used in paper
 Run `test_guide.py` to generate stylized captions. Since the code is modified based on CLIPCap and GeDi, there are many unused parameters. If you find it troublesome, you can go and see [the code for applying PPCap to PureT](https://github.com/gWeiXP/PPCapPureT), which has been tidied up and is now very clean and concise.
