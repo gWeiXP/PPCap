@@ -22,6 +22,9 @@ Important arguments include:
 * `--teststyle`, the desired style
 
 Apologies, we noticed that there are some absolute paths in the code that need to be modified to match the file paths on your device.
+* The paths like "/home/liwc/wxp/refercode/GeDi_Final/PPL/LM_ro" in `utils.py eval_ppl()` : we have uploaded the `PPL` folder to this project.
+* The paths like "/home/liwc/wxp/dataset/MSCOCO/train2014/" in `utils.py ClipCocoDataset()` : you may need to modify the code so that `filename` obtains the paths of images on your device.
+* The paths ""/home/liwc/wxp/refercode/DataTestProcess/bert-base-uncased/vocab.txt"" in `utils.py eval_acc()` : we have uploaded the `bert-base-uncased` folder to this project.
 
 ## Datasets and trained models
 * Download the processed dataset and trained models from [Baidu Netdisk](https://pan.baidu.com/s/1rBb8-4_lp2IfxJkEO0MmmA). the extracted code is 'zp8c'. The 'classifier' folder needs to be placed in the current directory.
@@ -48,3 +51,5 @@ If using PureT-XE as the factual model, set `--pretrained_path` to the path wher
 * `negative:`generate parameters %s Namespace(batch_size=36, code_0='positive', code_1='negative', data_test='/home/liwc/wxp/Alignment/github/dataset/Senticap/Senticap_ViT-L_14_test.pkl', device='cuda:1', disc_weight=175, gedi_model_name_or_path='/home/liwc/wxp/Alignment/github/trained_model/stylized_model/model_neg_9.pt', gen_model_type='pureT_SCST', generated_path='./generated/guide', max_seq_len=17, pretrained_path='/home/liwc/wxp/Alignment/github/trained_model/factual_model/model_pureT_SCST_30.pth', teststyle='negative', vocab_path='./mscoco/txt/coco_vocabulary.txt')
 * `romantic:`generate parameters %s Namespace(batch_size=36, code_0=' factual', code_1=' romantic', data_test='/home/liwc/wxp/Alignment/github/dataset/FlickrStyle10k/FlickrStyle10k_ViT-L_14_test.pkl', device='cuda:1', disc_weight=140, gedi_model_name_or_path='/home/liwc/wxp/Alignment/github/trained_model/stylized_model/model_ro_1.pt', gen_model_type='pureT_SCST', generated_path='./generated/guide', max_seq_len=17, pretrained_path='/home/liwc/wxp/Alignment/github/trained_model/factual_model/model_pureT_SCST_30.pth', teststyle='romantic', vocab_path='./mscoco/txt/coco_vocabulary.txt')
 * `humorous:`generate parameters %s Namespace(batch_size=36, code_0=' factual', code_1=' humorous', data_test='/home/liwc/wxp/Alignment/github/dataset/FlickrStyle10k/FlickrStyle10k_ViT-L_14_test.pkl', device='cuda:1', disc_weight=175, gedi_model_name_or_path='/home/liwc/wxp/Alignment/github/trained_model/stylized_model/model_fu_1.pt', gen_model_type='pureT_SCST', generated_path='./generated/guide', max_seq_len=17, pretrained_path='/home/liwc/wxp/Alignment/github/trained_model/factual_model/model_pureT_SCST_30.pth', teststyle='humorous', vocab_path='./mscoco/txt/coco_vocabulary.txt')
+
+ 
